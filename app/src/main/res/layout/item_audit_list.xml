@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5sdp"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_audit_list_created_by"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_height="0dp">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/txt_audit_list_name"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="left"
+            android:layout_height="0dp">
+
+        </TextView>
+
+
+
+        <TextView
+            android:textColor="@color/blue"
+            android:id="@+id/txt_audit_list_description"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight=".6"
+        android:padding="@dimen/_2sdp"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_continue"
+            android:gravity="center"
+            android:text="Continue"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/btn_done"
+            android:text="Done"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

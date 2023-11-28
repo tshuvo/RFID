@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="email_style">
+        <item name="android:drawableStart">@drawable/ic_baseline_email_24</item>
+    </style>
+</resources>

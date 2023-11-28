@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp"
+    android:orientation="vertical"
+    tools:context=".view.CreateAudit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:text="Create a new audit"/>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/location"/>
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/sp_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ph_warehouse"/>
+
+            <Spinner
+                android:layout_gravity="center_vertical"
+                android:id="@+id/sp_warehouse"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:id="@+id/edt_auth_name"
+            android:hint=" Auditor name"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:background="@drawable/edittext_round_back"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:text="Create Audit"
+        android:id="@+id/btn_create_audit"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="bottom"/>
+</LinearLayout>
