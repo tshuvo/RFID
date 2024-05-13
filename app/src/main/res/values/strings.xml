@@ -3,6 +3,7 @@
     <string name="reset_pass">Forget Password? <font color='#FF000000'><b>RESET</b></font> now.</string>
     <string name="login">Have Account? <font color='#FF000000'><b>LOGIN</b></font> now.</string>
     <string name="add_product">Add products to <font color='#FF000000'><b>Warehouse Inventory</b></font></string>
+    <string name="product_entry_in_warehouse">Product entry in <font color='#FF000000'><b>Warehouse</b></font></string>
     <string name="api_changes">The API’s Base URL and Endpoints are sensitive. Please copy and store the base API url before change. You need to provide SuperAdmin credentials during the change
 
     </string>

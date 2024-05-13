@@ -19,7 +19,7 @@ import com.pakiza.fortiz.rfid.common.CommonService;
 
 public class ApiSettingsActivity extends AppCompatActivity {
 
-    EditText edtApiUrl;
+    EditText edtApiUrl, edtApiBaseUrl;
     Button btnSaveApi;
     ImageButton imgBack;
     TextView txtPageTitle;
@@ -30,6 +30,7 @@ public class ApiSettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_api_settings);
         commonService = new CommonService(ApiSettingsActivity.this);
         edtApiUrl = findViewById(R.id.edt_api_url);
+        edtApiBaseUrl = findViewById(R.id.edt_base_url);
         btnSaveApi = findViewById(R.id.btn_api_sync);
         imgBack = findViewById(R.id.btnBack);
         txtPageTitle = findViewById(R.id.tvPageTitle);
@@ -38,8 +39,11 @@ public class ApiSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String url = edtApiUrl.getText().toString();
+                String endPoint = edtApiBaseUrl.getText().toString();
                 if (url.isEmpty()){
                     Toast.makeText(ApiSettingsActivity.this, "You have to give an API url!!", Toast.LENGTH_SHORT).show();
+                }else if(endPoint.isEmpty()){
+                    Toast.makeText(ApiSettingsActivity.this, "You have to give an End Point!!", Toast.LENGTH_SHORT).show();
 
                 }else{
 

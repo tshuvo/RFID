@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:orientation="vertical"
+    tools:context=".view.AddInventoryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/product_entry_in_warehouse"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:id="@+id/txt_product_name_rfid_entry"
+        android:padding="@dimen/_5sdp"
+           />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:id="@+id/txt_product_quantity"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/btn_scan_add_warehouse"
+        android:text="Scan and Add RFID"
+        android:backgroundTint="@color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_warehouse_product_entry"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="back"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight=".1"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Check Save"/>
+    </LinearLayout>
+
+</LinearLayout>

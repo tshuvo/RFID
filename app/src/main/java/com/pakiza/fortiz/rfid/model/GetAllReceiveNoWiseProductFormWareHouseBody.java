@@ -4,16 +4,16 @@ public class GetAllReceiveNoWiseProductFormWareHouseBody {
     private String areaId;
     private String receiveType;
     private String receiveNo;
-    private String storeID;
+    private String barcode;
 
     public GetAllReceiveNoWiseProductFormWareHouseBody() {
     }
 
-    public GetAllReceiveNoWiseProductFormWareHouseBody(String areaId, String receiveType, String receiveNo, String storeID) {
+    public GetAllReceiveNoWiseProductFormWareHouseBody(String areaId, String receiveType, String receiveNo, String barcode) {
         this.areaId = areaId;
         this.receiveType = receiveType;
         this.receiveNo = receiveNo;
-        this.storeID = storeID;
+        this.barcode = barcode;
     }
 
     public String getAreaId() {
@@ -40,11 +40,11 @@ public class GetAllReceiveNoWiseProductFormWareHouseBody {
         this.receiveNo = receiveNo;
     }
 
-    public String getStoreID() {
-        return storeID;
+    public String getBarcode() {
+        return barcode;
     }
 
-    public void setStoreID(String storeID) {
-        this.storeID = storeID;
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 }

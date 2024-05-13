@@ -18,134 +18,54 @@
         android:text="@string/add_product"/>
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/sp_warehouse_inventory"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_60sdp" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_5sdp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_margin="@dimen/_2sdp"
+        android:hint="Receive Number"
+        app:startIconDrawable="@drawable/hesh_demo">
 
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enable bar-code" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enable Receive number" />
-    </RadioGroup>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:orientation="vertical">
-
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_receive_number"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="@dimen/_5sdp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_2sdp"
-                android:src="@drawable/ph_barcode_light"
-                android:layout_weight=".1"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight=".03"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="20"
-                android:layout_weight=".5"
-                android:paddingRight="@dimen/_10sdp"
-                android:gravity="right|center_vertical"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".02"
-                android:background="@color/ash_dark"
-                android:backgroundTint="@color/ash_dark"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight=".2"
-                android:paddingLeft="@dimen/_10sdp"
-                android:gravity="center_vertical"
-                android:text="Qty"/>
-
-
-        </LinearLayout>
-
-       <!-- <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="20"
-                android:layout_weight="1"
-                android:paddingRight="@dimen/_10sdp"
-                android:gravity="right|center_vertical"/>
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".02"
-                android:background="@color/ash_dark"
-                android:backgroundTint="@color/ash_dark"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:paddingLeft="@dimen/_10sdp"
-                android:gravity="center_vertical"
-                android:text="Qty"/>
-
-        </LinearLayout>-->
-
-    </LinearLayout>
-
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_barcode"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:gravity="center_vertical"
-        android:text="ABC product"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:hint="11324455373773"
+        app:startIconDrawable="@drawable/ph_barcode_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_barcode_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:text="Scan RFID"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/btn_check"
+        android:text="Check"
         android:backgroundTint="@color/black"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_warehouse_product"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

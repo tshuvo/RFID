@@ -20,8 +20,9 @@ public interface ApiUrl {
     String API_RESEND_OTP = "Accounts/ResetPassword";
     String API_CREATE_AUDIT = "Audit/CreateAudit";
     String API_PERFORM_AUDIT_RUN = "Audit/PerformAuditRun";
+    String API_ERROR_RFID_STATUS_WAREHOUSE = "WarehouseInventory/ErrorRFIDStatusCheckForWarehouse";
     String API_AUDIT_MASTER = "Audit/GetByAuditMasterFromStatus";
     String API_GET_STORE_LIST = "WarehouseInventory/GetAllStore";
-    String API_GET_BARCODE_WISE_PRODUCT = "WarehouseInventory/GetAllBarcodeWiseProductFormWareHouseAndStore";
+    String API_GET_BARCODE_WISE_PRODUCT = "WarehouseInventory/GetAllReceiveNoWiseProductFormWareHouse";
 
 }

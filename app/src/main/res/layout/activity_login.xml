@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/edt_email"
                 android:hint="Login ID"
-                android:text="32818"
+                android:text="Rakib"
                 android:paddingLeft="10dp"
                 android:background="@drawable/edittext_round_back"
                 android:inputType="textEmailAddress"/>
@@ -92,7 +92,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/edt_pass"
                 android:hint="Password"
-                android:text="1234"
+                android:text="Rakib"
                 android:paddingLeft="10dp"
                 android:background="@drawable/edittext_round_back"
                 android:inputType="textPassword"/>

@@ -144,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
                                             commonService.storeToSharedPreferences("userProfile", userProfileData);
                                             commonService.storeToSharedPreferences("loginToken", loginResponse.getToken());
 
-                                            startActivity(new Intent(LoginActivity.this, CreateAudit.class));
+                                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 //                                        }
 
 
@@ -158,6 +158,7 @@ public class LoginActivity extends AppCompatActivity {
                                             runOnUiThread(new Runnable() {
                                                 @Override
                                                 public void run() {
+                                                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                                                     progressBar.hide();
                                                 }
                                             });

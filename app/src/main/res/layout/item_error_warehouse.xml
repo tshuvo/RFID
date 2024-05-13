@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/txt_error_sn"
+        android:background="@drawable/list_with_black_border"
+        android:textColor="@color/black"
+        android:text="SN"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".3">
+
+    </TextView>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/list_with_black_border"
+        android:text="RFID"
+        android:id="@+id/txt_error_rfid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5">
+
+    </TextView>
+
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/txt_error_status"
+        android:background="@drawable/list_with_black_border"
+        android:textColor="@color/black"
+        android:text="Status"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5">
+
+    </TextView>
+
+
+   <!-- <TextView
+        android:background="@drawable/list_with_black_border"
+        android:gravity="center"
+        android:id="@+id/txt_rfid"
+        android:textColor="@color/black"
+        android:text="RFID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".8">
+
+    </TextView>-->
+</LinearLayout>

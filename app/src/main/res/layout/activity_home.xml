@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_15sdp"
+    android:padding="@dimen/_10sdp"
     android:orientation="vertical"
     tools:context=".view.HomeActivity">
 
@@ -50,7 +50,7 @@
         android:layout_weight="1.9">
 
         <LinearLayout
-            android:id="@+id/ll_scanner"
+            android:id="@+id/ll_warehouse"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -91,6 +91,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_margin="8dp"
+            android:id="@+id/ll_retail_store"
             android:layout_height="0dp"
             android:layout_weight="1">
 
@@ -128,6 +129,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:id="@+id/ll_audit"
             android:layout_weight="1">
 
             <ImageView
@@ -234,14 +236,51 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/ll_logout"
+            android:layout_weight="1">
+
+            <ImageView
+                android:background="@drawable/edittext_round_back"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_question_mark_24"
+                android:layout_margin="5dp"
+                android:layout_weight=".6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:text="Logout"
+                android:background="@color/black1"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5">
+
+            </TextView>
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2">
 
-<!--            <include-->
+&lt;!&ndash;            <include&ndash;&gt;
 
-<!--                layout="@layout/item_genarel_auto"/>-->
-        </LinearLayout>
+&lt;!&ndash;                layout="@layout/item_genarel_auto"/>&ndash;&gt;
+        </LinearLayout>-->
 
     </LinearLayout>
 

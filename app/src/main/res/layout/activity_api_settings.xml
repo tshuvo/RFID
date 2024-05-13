@@ -11,41 +11,84 @@
     <include layout="@layout/header_layout"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/api_end_point"
+        android:id="@+id/api_base_url"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edit_txt_height"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="10dp"
+        android:orientation="vertical"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_base_url"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/edt_api_url"
-            android:hint="Base URL"
-            android:text="http://abc@bcd.com"
-            android:paddingLeft="10dp"
             android:background="@drawable/edittext_round_back"
-            android:inputType="text"/>
+            android:hint="Base URL"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:text="http://abc@bcd.com" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/api_end_point"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_txt_height"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_api_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_round_back"
+            android:hint="End Point"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:text="http://abc@bcd.com" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/api_changes"
-        android:padding="@dimen/_16sdp"
-        android:textSize="@dimen/_12sdp"
-        android:textColor="#F10F0F"/>
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/ic_info"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_weight=".3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:text="@string/api_changes"
+            android:padding="@dimen/_16sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="#F10F0F"/>
+
+    </LinearLayout>
 
 
     <Button
         android:textSize="25sp"
-        android:text="save"
+        android:text="save and exit"
         android:backgroundTint="@color/black"
         android:id="@+id/btn_api_sync"
         android:layout_marginLeft="16dp"
