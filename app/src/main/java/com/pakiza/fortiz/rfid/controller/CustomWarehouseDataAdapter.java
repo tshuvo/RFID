@@ -33,7 +33,7 @@ import java.util.HashMap;
 
 public class CustomWarehouseDataAdapter extends RecyclerView.Adapter<CustomWarehouseDataAdapter.CustomWarehouseDataViewHolder>{
 
-    private ArrayList<WareHouseWiseDataResponseModel> dataList;
+    private final ArrayList<WareHouseWiseDataResponseModel> dataList;
     Context mContext;
 
     public CustomWarehouseDataAdapter(ArrayList<WareHouseWiseDataResponseModel> dataList, Context mContext) {
@@ -54,7 +54,7 @@ public class CustomWarehouseDataAdapter extends RecyclerView.Adapter<CustomWareh
     public void onBindViewHolder(@NonNull CustomWarehouseDataViewHolder holder, int position) {
 
         WareHouseWiseDataResponseModel wareHouseWiseDataResponseModel = dataList.get(position);
-        holder.txtSn.setText(String.valueOf(position));
+        holder.txtSn.setText(String.valueOf(position+1));
         holder.txtProductName.setText(wareHouseWiseDataResponseModel.getProductName());
         holder.txtQnty.setText(wareHouseWiseDataResponseModel.getQuantity());
 

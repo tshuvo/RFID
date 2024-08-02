@@ -48,6 +48,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(HomeActivity.this, ChooseOptionActivity.class)
                         .putExtra("key","audit"));
                 break;
+
+            case R.id.ll_retail_store:
+                startActivity(new Intent(HomeActivity.this, ChooseTransferOption.class));
+                break;
         }
     }
 }

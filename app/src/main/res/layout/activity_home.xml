@@ -114,7 +114,7 @@
                 android:background="@color/black1"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:text="Retail Store"
+                android:text="Transfer"
                 android:gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

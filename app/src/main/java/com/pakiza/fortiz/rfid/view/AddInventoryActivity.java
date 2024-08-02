@@ -1,6 +1,7 @@
 package com.pakiza.fortiz.rfid.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -48,6 +50,8 @@ public class AddInventoryActivity extends AppCompatActivity {
     String selectedWarehouseId;
     EditText edtReceiveNumber, edtBarcode;
     RecyclerView rcvWarehouseData;
+    Toolbar toolbar;
+    ImageView imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,15 @@ public class AddInventoryActivity extends AppCompatActivity {
         edtBarcode = findViewById(R.id.edt_barcode_number);
         rcvWarehouseData = findViewById(R.id.rv_warehouse_product);
         btnCheck = findViewById(R.id.btn_check);
+        toolbar = findViewById(R.id.custom_toolbar);
+        imgBack = findViewById(R.id.img_back);
+        setSupportActionBar(toolbar);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         getWarehouseData();
         progressBar = new LoadingDialog(AddInventoryActivity.this, false, new DialogInterface.OnCancelListener() {
             @Override

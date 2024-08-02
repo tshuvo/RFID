@@ -8,7 +8,7 @@ import android.widget.EditText;
 import com.pakiza.fortiz.rfid.R;
 
 public class DigitTextWatcher implements TextWatcher {
-    private EditText nextDigit;
+    private final EditText nextDigit;
 
     public DigitTextWatcher(EditText nextDigit) {
         this.nextDigit = nextDigit;

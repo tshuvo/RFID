@@ -1,7 +1,7 @@
 package com.pakiza.fortiz.rfid.model;
 
 public class SendOtpBody {
-    private String email;
+    private final String email;
 
     public SendOtpBody(String email) {
         this.email = email;

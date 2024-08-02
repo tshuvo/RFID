@@ -1,6 +1,7 @@
 package com.pakiza.fortiz.rfid.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.pakiza.fortiz.rfid.R;
 import com.pakiza.fortiz.rfid.api.RetrofitClient;
@@ -42,6 +45,9 @@ public class CreateAudit extends AppCompatActivity {
     List<WarehouseModel> locationList =  null;
     List<StoreModel> storeList =  null;
     Button btnCreateAudit;
+    Toolbar toolbar;
+    ImageView imgBack;
+    TextView txtToolTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +57,18 @@ public class CreateAudit extends AppCompatActivity {
         spLocation = findViewById(R.id.sp_location);
         spWarehouse = findViewById(R.id.sp_warehouse);
         btnCreateAudit = findViewById(R.id.btn_create_audit);
+
+        txtToolTitle = findViewById(R.id.toolbar_title);
+        toolbar = findViewById(R.id.custom_toolbar);
+        imgBack = findViewById(R.id.img_back);
+        txtToolTitle.setText("Warehouse Inventory");
+        setSupportActionBar(toolbar);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         commonService = new CommonService(CreateAudit.this);
         token = "Bearer "+commonService.getSharedPreferencesValues("loginToken");

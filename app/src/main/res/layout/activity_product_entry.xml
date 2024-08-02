@@ -9,6 +9,8 @@
     android:orientation="vertical"
     tools:context=".view.AddInventoryActivity">
 
+    <include layout="@layout/custom_toolbar" android:id="@+id/custom_toolbar"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +39,68 @@
         android:padding="@dimen/_5sdp"
         android:layout_marginBottom="@dimen/_7sdp"
         />
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
 
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvTagUii"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="0"
+            android:textColor="@color/red1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="0"
+            android:textColor="@color/red1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tvTagLen"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/tvTagCount"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="RSSI"
+            android:textSize="15sp" />
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
@@ -59,6 +122,7 @@
 
         <Button
             android:layout_width="0dp"
+            android:id="@+id/btn_back"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="back"/>
@@ -72,6 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/btn_check_save"
             android:text="Check Save"/>
     </LinearLayout>
 

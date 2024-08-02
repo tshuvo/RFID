@@ -25,8 +25,10 @@ import com.pakiza.fortiz.rfid.api.RetrofitClient;
 import com.pakiza.fortiz.rfid.common.CommonService;
 import com.pakiza.fortiz.rfid.common.ConnectivityUtils;
 import com.pakiza.fortiz.rfid.common.LoadingDialog;
+import com.pakiza.fortiz.rfid.common.Utils;
 import com.pakiza.fortiz.rfid.model.LoginBody;
 import com.pakiza.fortiz.rfid.model.LoginResponse;
+import com.pakiza.fortiz.rfid.model.UserModel;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -139,12 +141,18 @@ public class LoginActivity extends AppCompatActivity {
 
                                             Log.e("login","login complete");
                                             Gson gson = new Gson();
+                                            UserModel userModel = loginResponse.getUserModel();
                                             String userProfileData = gson.toJson(loginResponse.getUserModel());
 
                                             commonService.storeToSharedPreferences("userProfile", userProfileData);
                                             commonService.storeToSharedPreferences("loginToken", loginResponse.getToken());
 
-                                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                            if(userModel.getActiveRegions().isEmpty()){
+                                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                            }else{
+                                                Utils.storeStringInPrefs(LoginActivity.this,"a_region", userModel.getActiveRegions());
+                                                startActivity(new Intent(LoginActivity.this, ChooseOptions.class));
+                                            }
 //                                        }
 
 

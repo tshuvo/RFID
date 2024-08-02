@@ -9,6 +9,9 @@
     android:orientation="vertical"
     tools:context=".view.AddInventoryActivity">
 
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/custom_toolbar"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -2,6 +2,7 @@ package com.pakiza.fortiz.rfid.view;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class ApiSettingsActivity extends AppCompatActivity {
     ImageButton imgBack;
     TextView txtPageTitle;
     CommonService commonService;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +34,16 @@ public class ApiSettingsActivity extends AppCompatActivity {
         edtApiUrl = findViewById(R.id.edt_api_url);
         edtApiBaseUrl = findViewById(R.id.edt_base_url);
         btnSaveApi = findViewById(R.id.btn_api_sync);
-        imgBack = findViewById(R.id.btnBack);
         txtPageTitle = findViewById(R.id.tvPageTitle);
+        toolbar = findViewById(R.id.custom_toolbar);
+        imgBack = findViewById(R.id.img_back);
+        setSupportActionBar(toolbar);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         btnSaveApi.setOnClickListener(new View.OnClickListener() {
             @Override

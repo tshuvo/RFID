@@ -32,14 +32,13 @@ public class CustomWarehouseErrorDataAdapter extends RecyclerView.Adapter<Custom
     private AudioManager am;
     private SoundPool soundPool;
     private float volumnRatio;
-    private ArrayList<WarehouseErrorModel> dataList;
+    private final ArrayList<WarehouseErrorModel> dataList;
     Context mContext;
 
     public CustomWarehouseErrorDataAdapter(ArrayList<WarehouseErrorModel> dataList, Context mContext) {
         this.dataList = dataList;
         this.mContext = mContext;
-        initSound();
-        initUHF();
+
     }
 
     @NonNull
@@ -53,14 +52,14 @@ public class CustomWarehouseErrorDataAdapter extends RecyclerView.Adapter<Custom
     @Override
     public void onBindViewHolder(@NonNull CustomWarehouseErrorDataViewHolder holder, int position) {
         WarehouseErrorModel warehouseErrorModel = dataList.get(position);
-        holder.txtSn.setText(String.valueOf(position));
+        holder.txtSn.setText(String.valueOf(position+1));
         holder.txtRfid.setText(warehouseErrorModel.getRevDetailId());
         holder.txtStatus.setText(warehouseErrorModel.getRfidStatus());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataList.size();
     }
 
     public class CustomWarehouseErrorDataViewHolder extends RecyclerView.ViewHolder{

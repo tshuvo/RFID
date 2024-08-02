@@ -3,16 +3,16 @@ package com.pakiza.fortiz.rfid.model;
 import java.util.ArrayList;
 
 public class CreateAuditBody {
-    private String id;
-    private String storeId;
-    private String areaId;
-    private String createdBy;
-    private String createdTime;
-    private String updatedBy;
-    private String updatedTime;
-    private String auditorName;
-    private String auditStatus;
-    private ArrayList<AuditDetailsModel>  auditDetails;
+    private final String id;
+    private final String storeId;
+    private final String areaId;
+    private final String createdBy;
+    private final String createdTime;
+    private final String updatedBy;
+    private final String updatedTime;
+    private final String auditorName;
+    private final String auditStatus;
+    private final ArrayList<AuditDetailsModel>  auditDetails;
 
     public CreateAuditBody(String id, String storeId,
                            String areaId, String createdBy, String createdTime, String updatedBy, String updatedTime, String auditorName, String auditStatus,

@@ -21,6 +21,9 @@ public interface ApiUrl {
     String API_CREATE_AUDIT = "Audit/CreateAudit";
     String API_PERFORM_AUDIT_RUN = "Audit/PerformAuditRun";
     String API_ERROR_RFID_STATUS_WAREHOUSE = "WarehouseInventory/ErrorRFIDStatusCheckForWarehouse";
+    String API_WAREHOUSE_RFID = "WarehouseInventory/SaveWisehouseRFID";
+    String API_ALL_COMPANY = "WarehouseInventory/GetAllCompany";
+    String API_ALL_WAREHOUSE = "WarehouseInventory/GetAllWareHouse";
     String API_AUDIT_MASTER = "Audit/GetByAuditMasterFromStatus";
     String API_GET_STORE_LIST = "WarehouseInventory/GetAllStore";
     String API_GET_BARCODE_WISE_PRODUCT = "WarehouseInventory/GetAllReceiveNoWiseProductFormWareHouse";

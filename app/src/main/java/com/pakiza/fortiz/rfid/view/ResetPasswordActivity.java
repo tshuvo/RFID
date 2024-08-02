@@ -15,9 +15,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.pakiza.fortiz.rfid.R;
 import com.pakiza.fortiz.rfid.api.RetrofitClient;
@@ -40,6 +42,8 @@ public class ResetPasswordActivity extends AppCompatActivity {
     Button btnReset;
     LinearLayout llEditBox;
     LoadingDialog progressBar;
+    Toolbar toolbar;
+    ImageView imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

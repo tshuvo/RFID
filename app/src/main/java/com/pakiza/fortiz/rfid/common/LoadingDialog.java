@@ -10,7 +10,7 @@ import android.view.Window;
 import com.pakiza.fortiz.rfid.R;
 
 public class LoadingDialog extends Dialog {
-    private Context mContext;
+    private final Context mContext;
 
 //    public LoadingDialog(Context context, int theme) {
 //        super(context, theme);

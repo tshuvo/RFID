@@ -2,6 +2,8 @@ package com.pakiza.fortiz.rfid.api;
 
 //import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_AUDIT_LIST;
 
+import static com.pakiza.fortiz.rfid.api.ApiUrl.API_ALL_COMPANY;
+import static com.pakiza.fortiz.rfid.api.ApiUrl.API_ALL_WAREHOUSE;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_CREATE_AUDIT;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_ERROR_RFID_STATUS_WAREHOUSE;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_BARCODE_WISE_PRODUCT;
@@ -12,8 +14,11 @@ import static com.pakiza.fortiz.rfid.api.ApiUrl.API_LOGIN;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_PERFORM_AUDIT_RUN;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_RESEND_OTP;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_SEND_OTP;
+import static com.pakiza.fortiz.rfid.api.ApiUrl.API_WAREHOUSE_RFID;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.AUTH;
 
+import com.pakiza.fortiz.rfid.model.AllCompanyResponse;
+import com.pakiza.fortiz.rfid.model.AllWarehouseResponse;
 import com.pakiza.fortiz.rfid.model.AppConfigBody;
 import com.pakiza.fortiz.rfid.model.AuditMasterResponse;
 import com.pakiza.fortiz.rfid.model.BarcodeWiseProductBody;
@@ -22,16 +27,19 @@ import com.pakiza.fortiz.rfid.model.CreateAuditBody;
 import com.pakiza.fortiz.rfid.model.ErrorRfidStatusResponse;
 import com.pakiza.fortiz.rfid.model.ErrorRfidStatusWarehouseBody;
 import com.pakiza.fortiz.rfid.model.GetAllReceiveNoWiseProductFormWareHouseBody;
+import com.pakiza.fortiz.rfid.model.GetWarehouseBody;
 import com.pakiza.fortiz.rfid.model.LoginBody;
 import com.pakiza.fortiz.rfid.model.LoginResponse;
 import com.pakiza.fortiz.rfid.model.PerformAuditRunBody;
 import com.pakiza.fortiz.rfid.model.PerformAuditRunResponse;
 import com.pakiza.fortiz.rfid.model.ResetOtpBody;
 import com.pakiza.fortiz.rfid.model.ResetOtpResponse;
+import com.pakiza.fortiz.rfid.model.SaveWarehouseRfidBody;
 import com.pakiza.fortiz.rfid.model.SendOtpBody;
 import com.pakiza.fortiz.rfid.model.StoreListResponse;
 import com.pakiza.fortiz.rfid.model.WareHouseWiseDataResponseModel;
 import com.pakiza.fortiz.rfid.model.WarehouseListResponse;
+import com.pakiza.fortiz.rfid.model.WarehouseRfidSaveResponse;
 import com.pakiza.fortiz.rfid.model.WarehouseWiseDataList;
 
 import io.reactivex.Flowable;
@@ -61,6 +69,14 @@ public interface ApiService {
     @POST(API_PERFORM_AUDIT_RUN)
     Flowable<PerformAuditRunResponse> performAuditRun(@Header(AUTH) String token, @Body PerformAuditRunBody body);
 
+    @Headers("Content-Type: application/json")
+    @POST(API_ALL_COMPANY)
+    Flowable<AllCompanyResponse> getAllCompany(@Header(AUTH) String token);
+
+    @Headers("Content-Type: application/json")
+    @POST(API_ALL_WAREHOUSE)
+    Flowable<AllWarehouseResponse> getAllWarehouse(@Header(AUTH) String token, @Body GetWarehouseBody body);
+
     //
     @Headers("Content-Type: application/json")
     @POST(API_GET_BARCODE_WISE_PRODUCT)
@@ -72,6 +88,11 @@ public interface ApiService {
     @POST(API_ERROR_RFID_STATUS_WAREHOUSE)
     Flowable<ErrorRfidStatusResponse> getWareHouseRfidStatusErrorDataList
             (@Header(AUTH) String token, @Body ErrorRfidStatusWarehouseBody body);
+
+    @Headers("Content-Type: application/json")
+    @POST(API_WAREHOUSE_RFID)
+    Flowable<WarehouseRfidSaveResponse> saveRFIDToServer
+            (@Header(AUTH) String token, @Body SaveWarehouseRfidBody body);
 
 
     @Headers("Content-Type: application/json")
