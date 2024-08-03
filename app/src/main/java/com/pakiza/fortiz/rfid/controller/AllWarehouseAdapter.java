@@ -17,8 +17,8 @@ import com.pakiza.fortiz.rfid.model.WarehouseDataModel;
 import java.util.List;
 
 public class AllWarehouseAdapter extends ArrayAdapter<WarehouseDataModel> {
-    private Context context;
-    private List<WarehouseDataModel> warehouses;
+    private final Context context;
+    private final List<WarehouseDataModel> warehouses;
     public AllWarehouseAdapter(@NonNull Context context, @NonNull List<WarehouseDataModel> objects) {
         super(context, 0, objects);
         this.context = context;

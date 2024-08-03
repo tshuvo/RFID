@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:orientation="vertical"
+    tools:context=".view.DetailList">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/txt_detail_header"
+        android:gravity="center_vertical"
+        android:text="Entry List in"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/sp_first_details"/>
+
+    <EditText
+        android:drawableStart="@android:drawable/ic_input_get"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/edt_detail_receive_number"/>
+
+    <EditText
+        android:drawableStart="@android:drawable/checkbox_off_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/edt_detail_barcode"/>
+
+    <Button
+        android:text="search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/btn_details_search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_detail_warehouse"/>
+
+</LinearLayout>

@@ -19,8 +19,8 @@ import java.util.List;
 
 public class AllCompanyAdapter extends ArrayAdapter<CompanyDataModel> {
 
-    private Context context;
-    private List<CompanyDataModel> companies;
+    private final Context context;
+    private final List<CompanyDataModel> companies;
     public AllCompanyAdapter(@NonNull Context context,  @NonNull List<CompanyDataModel> companies) {
         super(context, 0, companies);
         this.context = context;

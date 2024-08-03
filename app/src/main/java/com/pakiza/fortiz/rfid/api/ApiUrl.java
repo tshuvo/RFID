@@ -26,6 +26,7 @@ public interface ApiUrl {
     String API_ALL_WAREHOUSE = "WarehouseInventory/GetAllWareHouse";
     String API_AUDIT_MASTER = "Audit/GetByAuditMasterFromStatus";
     String API_GET_STORE_LIST = "WarehouseInventory/GetAllStore";
+    String API_GET_Warehouse_Wise_Report = "WarehouseInventory/GetAllWarehousBarcodeAndRcvNoWiseReport";
     String API_GET_BARCODE_WISE_PRODUCT = "WarehouseInventory/GetAllReceiveNoWiseProductFormWareHouse";
 
 }

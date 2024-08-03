@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    tools:context=".view.TransferReceive">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/txt_detail_header"
+        android:gravity="center_vertical"
+        android:text="@string/transfer_receive"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/sp_transfer_to"/>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center_vertical"
+        android:text="14-07-24"
+        android:id="@+id/txt_current_date"/>-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:hint="Transfer Challan No"
+        android:id="@+id/edt_remarks"/>
+
+    <Button
+        android:text="Search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/btn_transfer_receive"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_transfer_receive_product"/>
+
+
+</LinearLayout>

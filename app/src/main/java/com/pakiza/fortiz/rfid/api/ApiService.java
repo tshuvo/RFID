@@ -10,6 +10,7 @@ import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_BARCODE_WISE_PRODUCT;
 //import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_LOCATION_LIST;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_STORE_LIST;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_WAREHOUSE_LIST;
+import static com.pakiza.fortiz.rfid.api.ApiUrl.API_GET_Warehouse_Wise_Report;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_LOGIN;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_PERFORM_AUDIT_RUN;
 import static com.pakiza.fortiz.rfid.api.ApiUrl.API_RESEND_OTP;
@@ -37,6 +38,7 @@ import com.pakiza.fortiz.rfid.model.ResetOtpResponse;
 import com.pakiza.fortiz.rfid.model.SaveWarehouseRfidBody;
 import com.pakiza.fortiz.rfid.model.SendOtpBody;
 import com.pakiza.fortiz.rfid.model.StoreListResponse;
+import com.pakiza.fortiz.rfid.model.WareHouseWiseData;
 import com.pakiza.fortiz.rfid.model.WareHouseWiseDataResponseModel;
 import com.pakiza.fortiz.rfid.model.WarehouseListResponse;
 import com.pakiza.fortiz.rfid.model.WarehouseRfidSaveResponse;
@@ -98,6 +100,10 @@ public interface ApiService {
     @Headers("Content-Type: application/json")
     @POST(API_GET_WAREHOUSE_LIST)
     Flowable<WarehouseListResponse> getWareHouse(@Header(AUTH) String token);
+
+    @Headers("Content-Type: application/json")
+    @POST(API_GET_Warehouse_Wise_Report)
+    Flowable<WarehouseListResponse> getWareHouseWiseReport(@Header(AUTH) String token, @Body WareHouseWiseData body);
 
     @Headers("Content-Type: application/json")
     @POST(API_GET_STORE_LIST)

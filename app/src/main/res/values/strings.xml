@@ -116,7 +116,8 @@
     <string name="title_other_devices">Other Devices</string>
     <string name="button_scan">Scan</string>
     <string name="title_activity_uhfmain">UHF</string>
-
+    <string name="transfer">Add products to <b>Transfer</b></string>
+    <string name="transfer_receive">Add products to <b>Transfer Receive</b></string>
     <!-- inventorytag -->
     <string name="tvInventoryName">Inventory Tag</string>
     <string name="tvCountOfTags">Total  </string>
